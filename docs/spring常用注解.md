@@ -1,0 +1,13 @@
+##@Controller
+    作用于controller类上，声明是一个controller类。
+##@RequestMapping
+    既可以作用于类上，也可以作用于方法上
+    1. 类上，用于标注请求的路径；
+    2. 方法上，进一步映射特定的url到某个具体的方法上；
+##@PathVariable
+    作用于方法上，用于表示参数的值来自url参数，于@RequestMapping一起使用。
+##@GetMapping
+    是一个组合注解，是@RequestMapping(method = RequestMethod.GET)的缩写；
+##@PostMapping
+    是一个组合注解，是@RequestMapping(method = RequestMethod.POST)的缩写；
+    

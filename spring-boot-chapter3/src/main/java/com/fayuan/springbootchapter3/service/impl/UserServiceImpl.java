@@ -7,6 +7,7 @@ package com.fayuan.springbootchapter3.service.impl;
 import com.fayuan.springbootchapter3.entity.User;
 import com.fayuan.springbootchapter3.service.UserService;
 import lombok.Data;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +18,7 @@ import java.util.List;
  * @author mr.24
  * @version Id: UserServiceImpl, v 1.0 2019-04-10 10:27 Exp $$
  */
-@Data
+@Service
 public class UserServiceImpl implements UserService {
     @Override
     public List<User> getAllUser() {
