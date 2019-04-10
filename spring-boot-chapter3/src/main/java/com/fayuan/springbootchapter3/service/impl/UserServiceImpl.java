@@ -49,7 +49,7 @@ public class UserServiceImpl implements UserService {
         for(int i = 0; i < num; i++) {
             User user = new User();
             user.setId((long)i);
-            user.setName("mame" + i);
+            user.setName("name" + i);
             list.add(user);
         }
         return list;
