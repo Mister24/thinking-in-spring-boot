@@ -46,10 +46,10 @@ public class UserServiceImpl implements UserService {
      * */
     private List<User> sampleUser(int num) {
         List<User> list = new ArrayList<>(num);
-        for(int i=0; i<num; i++) {
+        for(int i = 0; i < num; i++) {
             User user = new User();
             user.setId((long)i);
-            user.setName("mame"+i);
+            user.setName("mame" + i);
             list.add(user);
         }
         return list;
