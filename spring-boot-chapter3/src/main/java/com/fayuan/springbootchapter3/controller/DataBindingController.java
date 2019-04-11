@@ -20,6 +20,7 @@ import java.util.Date;
  * @version Id: DataBindingController, v 1.0 2019-04-11 22:39 Exp $$
  */
 @Controller
+@RequestMapping("/databind")
 public class DataBindingController {
 
     /**
@@ -31,6 +32,7 @@ public class DataBindingController {
     @InitBinder
     protected void initBinder(WebDataBinder binder) {
         binder.addCustomFormatter(new DateFormatter("yyyy-MM-dd"));
+
     }
 
     /**
