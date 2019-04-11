@@ -10,4 +10,7 @@
     是一个组合注解，是@RequestMapping(method = RequestMethod.GET)的缩写；
 ##@PostMapping
     是一个组合注解，是@RequestMapping(method = RequestMethod.POST)的缩写；
+##@responseBody
+    作用是将controller的方法返回的对象通过适当的转换器转换为指定的格式之后，
+    写入到response对象的body区，通常用来返回JSON数据或者是XML
     
