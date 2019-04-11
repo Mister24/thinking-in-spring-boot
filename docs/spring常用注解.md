@@ -13,4 +13,7 @@
 ##@responseBody
     作用是将controller的方法返回的对象通过适当的转换器转换为指定的格式之后，
     写入到response对象的body区，通常用来返回JSON数据或者是XML
-    
+##@InitBinder
+    @InitBinder用于在@Controller中标注于方法上，表示为当前控制器注册一个属性编辑器，
+    只对当前的Controller有效。@InitBinder标注的方法必须有一个参数WebDataBinder。
+    所谓的属性编辑器可以理解就是帮助我们完成参数绑定。
