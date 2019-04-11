@@ -7,10 +7,7 @@ package com.fayuan.springbootchapter3.controller;
 import com.fayuan.springbootchapter3.entity.User;
 import com.fayuan.springbootchapter3.entity.form.OrderPostForm;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * javabean类型的controller
@@ -63,5 +60,25 @@ public class JavaBeanController {
     @ResponseBody
     public String saveOrder(OrderPostForm form) {
         return "success";
+    }
+
+    /**
+     * 在@RequestBody中使用Json
+     * 调用方式：curl -X POST \
+     *   http://127.0.0.1:8080/javabean/saveJsonOrder.json \
+     *   -H 'Content-Type: application/json' \
+     *   -d '{
+     * 	"name":"hello",
+     * 	"id":1
+     * }'
+     *
+     * @param user 用户
+     *
+     * @return     结果
+     * */
+    @RequestMapping("/saveJsonOrder.json")
+    @ResponseBody
+    public String saveOrderByJson(@RequestBody User user) {
+        return user.getName();
     }
 }
