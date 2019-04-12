@@ -4,6 +4,7 @@
  */
 package com.fayuan.springbootchapter3.entity.form;
 
+import com.fayuan.springbootchapter3.entity.validate.WorkOverTime;
 import lombok.Data;
 
 import javax.validation.constraints.Email;
