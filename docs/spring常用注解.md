@@ -17,3 +17,7 @@
     @InitBinder用于在@Controller中标注于方法上，表示为当前控制器注册一个属性编辑器，
     只对当前的Controller有效。@InitBinder标注的方法必须有一个参数WebDataBinder。
     所谓的属性编辑器可以理解就是帮助我们完成参数绑定。
+##@Configuration启动容器 + @Bean注册Bean
+    用于定义配置类，可替换xml配置文件，被注解的类内部包含有一个或多个被@Bean注解的方法，
+    这些方法将会被AnnotationConfigApplicationContext或AnnotationConfigWebApplicationContext类
+    进行扫描，并用于构建bean定义，初始化Spring容器。
