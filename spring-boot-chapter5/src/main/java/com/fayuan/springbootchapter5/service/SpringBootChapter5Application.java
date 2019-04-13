@@ -1,4 +1,4 @@
-package com.fayuan.springbootchapter5;
+package com.fayuan.springbootchapter5.service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
