@@ -19,16 +19,16 @@ public class User implements Serializable {
     private static final long serialVersionUID = 3471961399691260696L;
 
     /** 用户id */
-    private Integer id ;
+    private Integer  id;
 
     /** 部门 */
-    private Integer departmentId ;
+    private Integer  departmentId ;
 
     /** 名称 */
-    private String name ;
+    private String   name ;
 
     /** 创建时间 */
-    private Date createTime ;
+    private Date     createTime ;
 
     public User() {
     }

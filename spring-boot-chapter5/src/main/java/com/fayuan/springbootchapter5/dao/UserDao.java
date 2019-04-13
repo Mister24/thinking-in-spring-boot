@@ -4,10 +4,7 @@
  */
 package com.fayuan.springbootchapter5.dao;
 import java.sql.ResultSet;
-import java.util.Date;
-
 import com.fayuan.springbootchapter5.entity.User;
-import com.mysql.cj.protocol.Resultset;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -18,6 +15,8 @@ import java.sql.SQLException;
 
 
 /**
+ * 数据库操作
+ *
  * @author mr.24
  * @version Id: UserDao, v 1.0 2019-04-13 11:43 Exp $$
  */
@@ -47,8 +46,8 @@ public class UserDao {
      * @param userId 用户id
      * @return       用户对象
      */
-    public User getUser(Long userId) {
-        String sql = "select * from user where user_id=?";
+    public User getUserById(Long userId) {
+        String sql = "select * from user where id=?";
         User user = jdbcTemplate.queryForObject(sql, new RowMapper<User>() {
             @Override
             public User mapRow(ResultSet resultset, int rowNum) throws SQLException {
