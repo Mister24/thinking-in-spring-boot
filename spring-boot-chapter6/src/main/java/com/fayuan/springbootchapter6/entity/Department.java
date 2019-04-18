@@ -5,40 +5,33 @@
 package com.fayuan.springbootchapter6.entity;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
- * 用户类
+ * 部门类
  *
  * @author mr.24
- * @version Id: User, v 1.0 2019-04-17 22:42 Exp $$
+ * @version Id: Department, v 1.0 2019-04-18 09:42 Exp $$
  */
-@Entity
-public class User {
+public class Department {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private String id;
 
     @Column
     private String name;
 
-    @Column(name = "create_time")
-    private Date date;
-
-    @ManyToOne
-    @JoinColumn(name = "department_id")
-    Department department;
-
-    public User() {
-        // JPA要求实体必须有一个空的构造函数
-    }
+    @OneToMany(mappedBy = "department")
+    private Set<User> users = new HashSet<>();
 
     /**
      * Getter method for property <tt>id</tt>.
      *
      * @return property value of id
      */
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
@@ -47,7 +40,7 @@ public class User {
      *
      * @param id value to be assigned to property id
      */
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -70,20 +63,20 @@ public class User {
     }
 
     /**
-     * Getter method for property <tt>date</tt>.
+     * Getter method for property <tt>users</tt>.
      *
-     * @return property value of date
+     * @return property value of users
      */
-    public Date getDate() {
-        return date;
+    public Set<User> getUsers() {
+        return users;
     }
 
     /**
-     * Setter method for property <tt>date</tt>.
+     * Setter method for property <tt>users</tt>.
      *
-     * @param date value to be assigned to property date
+     * @param users value to be assigned to property users
      */
-    public void setDate(Date date) {
-        this.date = date;
+    public void setUsers(Set<User> users) {
+        this.users = users;
     }
 }
